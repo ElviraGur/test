@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="result-wrap">
+        <div class="result"></div>
+        <i class="fas fa-calendar-alt "></i> 
+    </div>
+    <div class="custom block">
+        <select>
+            <option value="Today">Today</option>
+            <option >Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+          </select>
+    </div>
+
+    <div class="timezone block">
+        <select>
+            <option>Timezone: (GMT+5) Eastern Time</option>
+          </select>
+    </div>
+    <div class="wrap-calendar">
+        <div class="content">
+            <p>From</p>
+            <div class="content__calendar">
+                <div class="datepicker">
+                    <table id="calendar" >
+                        <thead>
+                            <tr>
+                            <td>
+                                <i class="fas fa-chevron-circle-left"></i>
+                            <td colspan="5">
+                            <td>
+                                <i class="fas fa-chevron-circle-right"></i>
+                            <tr><td>MO<td>TU<td>WE<td>TH<td>FR<td>ST<td>SU
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <span id="leftDate"></span>
+                <i class="fas fa-calendar-alt" onclick="calendarHandler('datepicker-left')"></i>
+            </div>
+        </div>
+        <div class="content">
+            <p>To</p>
+            <div class="content__calendar">
+                <span id="rightDate"></span> 
+                <i class="fas fa-calendar-alt" onclick="calendarHandler('datepicker-right')"></i>
+            </div>
+        </div>
+    </div>
+    <div class="wpar-button">
+        <button class="btn">cancel</button>
+        <button class="btn btn__color" onclick="applyDates()">apply</button>
+    </div>
+</div>
+
+
+
+ <script src="main.js"></script>
+</body>
+</html>
