@@ -26,8 +26,7 @@ function hideCalendar(datepicker) {
 }
 
 function showCalendar(datepicker, position) {
-	datepicker.classList.add('datepicker-left');
-	datepicker.classList.add('datepicker-right');
+	datepicker.classList.add(position);
 	datepicker.style.display = 'flex';
 }
 
